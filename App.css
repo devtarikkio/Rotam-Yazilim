@@ -1,0 +1,1292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+/* =========================================
+   GENEL
+   ========================================= */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f766e, #14b8a6, #0ea5e9, #1e3a8a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================================
+   KART
+   ========================================= */
+.card {
+  background: rgba(28, 31, 36, 0.88);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 580px;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.card p,
+.card span,
+.card label,
+.card div {
+  color: #e2e8f0;
+}
+
+/* =========================================
+   TİPOGRAFİ
+   ========================================= */
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #0ea5e9, #14b8a6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   FORM
+   ========================================= */
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.3);
+  color: #f1f5f9;
+}
+
+.input-group input::placeholder {
+  color: white;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   BUTONLAR
+   ========================================= */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #0ea5e9, #14b8a6);
+  color: white;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.admin-btn {
+  background: none;
+  color: #14b8a6;
+  font-size: 0.85rem;
+  padding: 8px;
+  border: 2px dashed #14b8a6;
+}
+
+.back-btn {
+  background: none;
+  color: #a0aec0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* =========================================
+   ANKET SARMALAYICI
+   ========================================= */
+.survey-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================
+   ANKET & SONUÇ KARTI — DARK TEMA
+   ========================================= */
+.survey-container > .card {
+  background: rgba(28, 31, 36, 0.92) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(18px);
+  color: #e2e8f0 !important;
+}
+
+.survey-container > .card h1,
+.survey-container > .card h2,
+.survey-container > .card h3,
+.survey-container > .card p,
+.survey-container > .card span,
+.survey-container > .card div,
+.survey-container > .card strong {
+  color: #e2e8f0 !important;
+  -webkit-text-fill-color: #e2e8f0 !important;
+}
+
+.q-count {
+  font-size: 1rem;
+  color: #14b8a6 !important;
+  -webkit-text-fill-color: #14b8a6 !important;
+  font-weight: 700;
+}
+
+.q-text {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #f1f5f9 !important;
+  -webkit-text-fill-color: #f1f5f9 !important;
+  line-height: 1.4;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opt-btn {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 184, 166, 0.4) !important;
+  background: rgba(20, 184, 166, 0.08) !important;
+  color: #e2e8f0 !important;
+  -webkit-text-fill-color: #e2e8f0 !important;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.opt-btn:hover {
+  background: rgba(20, 184, 166, 0.25) !important;
+  border-color: #14b8a6 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.opt-btn:active {
+  transform: translateY(0);
+  background: rgba(14, 165, 233, 0.3) !important;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #0ea5e9);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+/* =========================================
+   SONUÇ — DARK TEMA
+   ========================================= */
+.result-card {
+  background: rgba(35, 35, 40, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(15px);
+}
+
+.res-title {
+  font-size: 2rem;
+  color: #14b8a6 !important;
+  -webkit-text-fill-color: #14b8a6 !important;
+}
+
+.res-highlight {
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #14b8a6, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.res-detail-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 16px;
+}
+
+.res-detail-box p,
+.res-detail-box strong,
+.res-detail-box span {
+  color: #cbd5e1 !important;
+  -webkit-text-fill-color: #cbd5e1 !important;
+}
+
+/* =========================================
+   ADMİN KARTI
+   ========================================= */
+.admin-input-group {
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   LAMBALI GİRİŞ EKRANI
+   ========================================= */
+.lamp-page-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.6s ease;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.lamp-page-wrapper.lamp-off { background-color: #121417; }
+.lamp-page-wrapper.lamp-on  { background-color: #1c1f24; }
+
+.lamp-container {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.65);
+  transform-origin: center top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 101;
+  pointer-events: none;
+}
+
+.pull-string-container {
+  pointer-events: all;
+}
+
+.lampshade {
+  width: 180px;
+  height: 80px;
+  background: #fdf5e6;
+  border-radius: 90px 90px 0 0;
+  position: relative;
+  z-index: 3;
+}
+
+.lamp-stand {
+  width: 16px;
+  height: 220px;
+  background: #fdf5e6;
+  z-index: 2;
+}
+
+.lamp-base {
+  width: 120px;
+  height: 14px;
+  background: #fdf5e6;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-glow {
+  position: absolute;
+  top: 80px;
+  width: 450px;
+  height: 500px;
+  background: radial-gradient(circle at top, rgba(255, 250, 180, 0.25), transparent 70%);
+  clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lamp-page-wrapper.lamp-on .light-glow { opacity: 1; }
+
+.pull-string-container {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+}
+
+.pull-string {
+  width: 3px;
+  height: 60px;
+  background: #888;
+  transition: height 0.15s ease-out;
+}
+
+.pull-knob {
+  width: 16px;
+  height: 16px;
+  background: #d4af37;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.pull-string-container:active .pull-string { height: 90px; }
+
+.student-form-container {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 520px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  margin-top: 160px;
+}
+
+.lamp-page-wrapper.lamp-on .student-form-container {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dark-card {
+  background: rgba(35, 35, 40, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+  padding: 20px !important;
+}
+
+.dark-title {
+  background: none !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.dark-subtitle { color: #ccc !important; }
+
+.dark-card input {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.dark-card input::placeholder { color: #aaa !important; }
+
+/* =========================================
+   ADMİN SAYFA SARMALAYICI
+   ========================================= */
+.admin-page-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1c1f24;
+  box-sizing: border-box;
+}
+
+.admin-card {
+  width: 90%;
+  max-width: 420px;
+  margin: 10vh auto 40px auto;
+}
+
+/* =========================================
+   KULÜP LOGOSU
+   ========================================= */
+.club-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.4));
+}
+
+/* =========================================
+   ONAY KUTULARI
+   ========================================= */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #ccc;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 2px;
+  padding: 0;
+  border: none;
+  accent-color: #14b8a6;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #14b8a6;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* =========================================
+   MODAL
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.modal-box {
+  background: #1e2228;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-title {
+  color: #14b8a6;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.modal-text {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.modal-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  margin-bottom: 16px;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #14b8a6 #2a2d35;
+}
+
+.modal-scroll::-webkit-scrollbar { width: 5px; }
+.modal-scroll::-webkit-scrollbar-track { background: #2a2d35; border-radius: 10px; }
+.modal-scroll::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 10px; }
+
+.modal-section-title {
+  color: #14b8a6;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 14px 0 4px;
+}
+
+.modal-list {
+  color: #ccc;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  padding-left: 18px;
+  margin: 4px 0;
+}
+
+/* =========================================
+   ROL BADGE
+   ========================================= */
+.role-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 10px 0 16px;
+}
+
+.developer-badge {
+  background: rgba(14, 165, 233, 0.15);
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+}
+
+.school-badge {
+  background: rgba(20, 184, 166, 0.15);
+  border: 1px solid #14b8a6;
+  color: #14b8a6;
+}
+
+/* =========================================
+   SONUÇ SİMGESİ
+   ========================================= */
+.res-icon {
+  font-size: 4rem;
+  margin: 10px 0 4px;
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0); opacity: 0; }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.res-icon-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 20px;
+  animation: popIn 0.5s ease;
+}
+
+/* =========================================
+   SÜPER ADMİN PANEL
+   ========================================= */
+.super-admin-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sa-sidebar {
+  width: 220px;
+  min-width: 220px;
+  background: rgba(14, 16, 20, 0.98);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 12px 16px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 200;
+}
+
+.sa-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.sa-logo { font-size: 1.5rem; }
+
+.sa-sidebar-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: #14b8a6;
+}
+
+/* Okul adı — sidebar badge */
+.sa-school-badge-sidebar {
+  background: rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 10px;
+  color: #14b8a6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  margin: 0 8px 20px;
+  text-align: center;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.sa-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.sa-nav-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.sa-nav-btn:hover {
+  background: rgba(20, 184, 166, 0.08);
+  color: #e2e8f0;
+}
+
+.sa-nav-active {
+  background: rgba(20, 184, 166, 0.14) !important;
+  color: #14b8a6 !important;
+  border-left: 3px solid #14b8a6 !important;
+}
+
+.sa-back-btn {
+  margin-top: auto;
+  font-size: 0.78rem !important;
+}
+
+.sa-content {
+  margin-left: 220px;
+  width: calc(100% - 220px);
+  flex: 1;
+  padding: 40px 36px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  color: #e2e8f0;
+  background-color: #13151a;
+  overflow-x: hidden;
+}
+
+.sa-section {
+  max-width: 860px;
+}
+
+.sa-section-full {
+  max-width: 100%;
+}
+
+/* =========================================
+   BİLGİ KARTI (Okul Admin için yeni)
+   ========================================= */
+.sa-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(20, 184, 166, 0.06);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-top: 24px;
+}
+
+.sa-info-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sa-info-title {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #14b8a6 !important;
+  -webkit-text-fill-color: #14b8a6 !important;
+  margin: 0 0 4px;
+}
+
+.sa-info-desc {
+  font-size: 0.8rem;
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =========================================
+   İSTATİSTİK DAĞILIM BLOKLARI
+   ========================================= */
+.sa-dist-block {
+  margin-top: 28px;
+}
+
+.sa-dist-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #14b8a6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px;
+}
+
+.sa-dist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sa-dist-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 100px;
+  align-items: center;
+  gap: 12px;
+}
+
+.sa-dist-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sa-dist-bar-wrap {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sa-dist-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #0ea5e9);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+  min-width: 4px;
+}
+
+.sa-dist-count {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-align: right;
+}
+
+.sa-dist-pct {
+  font-size: 0.72rem;
+  color: #475569;
+  font-weight: 400;
+}
+
+.sa-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sa-section-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #f1f5f9;
+  margin: 0 0 6px;
+}
+
+.sa-section-sub {
+  color: #475569;
+  font-size: 0.85rem;
+  margin-bottom: 28px;
+}
+
+/* =========================================
+   DASHBOARD KARTLARI
+   ========================================= */
+.sa-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.sa-dash-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  font-family: 'Montserrat', sans-serif;
+  color: #e2e8f0;
+}
+
+.sa-dash-card:hover {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(20, 184, 166, 0.4);
+  transform: translateY(-3px);
+}
+
+.sa-dash-icon { font-size: 2rem; }
+
+.sa-dash-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* =========================================
+   FİLTRE SATIRI
+   ========================================= */
+.sa-filter-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.sa-search,
+.sa-select {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  padding: 8px 12px;
+  outline: none;
+}
+
+.sa-search:focus,
+.sa-select:focus {
+  border-color: rgba(20, 184, 166, 0.5);
+}
+
+.sa-search { flex: 1; min-width: 180px; }
+.sa-select option { background: #1e2228; }
+.sa-select-full { width: 100%; box-sizing: border-box; }
+
+/* =========================================
+   TABLO
+   ========================================= */
+.sa-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.sa-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+
+.sa-table th {
+  background: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+  font-weight: 700;
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(20, 184, 166, 0.18);
+}
+
+.sa-table td {
+  padding: 10px 14px;
+  color: #94a3b8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sa-table tr:last-child td { border-bottom: none; }
+.sa-table tr:hover td { background: rgba(255, 255, 255, 0.02); }
+
+.sa-result-badge {
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  color: #0ea5e9;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.sa-count {
+  color: #334155;
+  font-size: 0.78rem;
+  margin-top: 10px;
+}
+
+.sa-loading {
+  color: #475569;
+  font-size: 0.85rem;
+  margin-top: 16px;
+}
+
+/* =========================================
+   İSTATİSTİK KARTLARI
+   ========================================= */
+.sa-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.sa-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 22px 16px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sa-stat-val {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #14b8a6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  line-height: 1.3;
+}
+
+.sa-stat-key {
+  font-size: 0.72rem;
+  color: #475569;
+  margin-top: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* =========================================
+   SORULAR
+   ========================================= */
+.sa-q-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sa-q-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.sa-q-card:hover {
+  border-color: rgba(20, 184, 166, 0.25);
+}
+
+.sa-q-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sa-q-num {
+  background: rgba(20, 184, 166, 0.12);
+  color: #14b8a6;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.sa-q-text {
+  flex: 1;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.sa-q-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.sa-btn-edit,
+.sa-btn-delete {
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.sa-btn-edit  { background: rgba(14, 165, 233, 0.12); color: #0ea5e9; }
+.sa-btn-delete { background: rgba(239, 68, 68, 0.12); color: #ef4444; }
+.sa-btn-edit:hover,
+.sa-btn-delete:hover { opacity: 0.75; transform: scale(0.97); }
+
+.sa-q-opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sa-q-opt {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  padding: 3px 10px;
+  font-size: 0.73rem;
+  color: #64748b;
+}
+
+.sa-add-btn {
+  width: auto !important;
+  padding: 8px 18px !important;
+  font-size: 0.82rem !important;
+}
+
+/* Modal inputlar */
+.sa-modal-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #f1f5f9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  padding: 9px 12px;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sa-modal-input:focus {
+  border-color: rgba(20, 184, 166, 0.5);
+}
+
+/* =========================================
+   EXCEL KARTLARI
+   ========================================= */
+.sa-excel-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+
+.sa-excel-card:hover {
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+.sa-excel-card-title {
+  color: #14b8a6;
+  font-size: 1rem;
+  font-weight: 900;
+  margin: 0 0 6px;
+}
+
+.sa-excel-desc {
+  color: #475569;
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+/* =========================================
+   MOBİL RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .super-admin-wrapper {
+    flex-direction: column;
+  }
+
+  .sa-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    padding: 14px 12px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .sa-school-badge-sidebar {
+    margin: 0 0 12px;
+  }
+
+  .sa-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .sa-nav-btn {
+    font-size: 0.7rem;
+    padding: 7px 10px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .sa-nav-active {
+    border-left: none !important;
+    border-bottom: 2px solid #14b8a6 !important;
+  }
+
+  .sa-back-btn {
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .sa-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .sa-section-title {
+    font-size: 1.1rem;
+  }
+
+  .sa-q-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sa-q-actions {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sa-filter-row {
+    flex-direction: column;
+  }
+  .sa-search, .sa-select {
+    width: 100%;
+  }
+
+  .sa-info-card {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sa-dist-row {
+    grid-template-columns: 120px 1fr 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lamp-container {
+    transform: translateX(-50%) scale(0.52);
+    top: 5px;
+  }
+
+  .student-form-container {
+    margin-top: 140px;
+    width: 95%;
+  }
+
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+
+  .dark-card {
+    padding: 14px !important;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+  }
+
+  .q-text {
+    font-size: 1rem;
+  }
+
+  .res-title {
+    font-size: 1.4rem;
+  }
+
+  .res-highlight {
+    font-size: 1.8rem;
+  }
+
+  .modal-box {
+    padding: 16px;
+  }
+
+  .modal-scroll {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 380px) {
+  .lamp-container {
+    transform: translateX(-50%) scale(0.42);
+    top: 5px;
+  }
+
+  .student-form-container {
+    margin-top: 120px;
+  }
+}
