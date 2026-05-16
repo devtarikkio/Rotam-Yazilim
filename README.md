@@ -17,7 +17,7 @@ Proje, kurumsal standartlarda **Katmanlı Mimari (Layered Architecture)**, **DTO
 * **Framework:** Spring Boot 4.0.3
 * **Güvenlik:** Spring Security & JWT (Stateless)
 * **Veri Erişimi:** Spring Data JPA / Hibernate
-* **Veritabanı:** PostgreSQL
+* **Veritabanı:** MySQL
 * **Araçlar:** Spring Tool Suite (STS), Maven, Lombok
 
 ### Frontend
